@@ -12,7 +12,11 @@
  */
 
 int main(int argc, char *argv[]) {
-    (void)argc; (void)argv;
-    /* TODO */
+     int resultado = 0;
+
+    for (char **arg = argv + 1; *arg != NULL; arg++)
+        resultado += ToInteger(*arg);
+
+    printf("%d\n", resultado);
     return 0;
 }
